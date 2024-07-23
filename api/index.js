@@ -5,12 +5,18 @@ const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, {
-    cors: {
-        origin: '*',
-        methods: ['GET', 'POST']
-    }
-});
+
+
+
+const http = require('http').Server(app);
+
+const io = require('socket.io')(http);
+// const io = socketIo(server, {
+//     cors: {
+//         origin: '*',
+//         methods: ['GET', 'POST']
+//     }
+// });
 
 const users = {};
 
