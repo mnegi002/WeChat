@@ -37,6 +37,10 @@ socket.on('receive-message', data => {
     append(data.message, 'left', data.user);
 });
 
+socket.on('user-disconnected', user => {
+    append(`${user} left the chat`, 'middle');
+});
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const message = messageInput.value;
