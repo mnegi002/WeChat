@@ -5,22 +5,20 @@ const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
-
-
-
-const http = require('http').Server(app);
-
-const io = require('socket.io')(http);
-// const io = socketIo(server, {
-//     cors: {
-//         origin: '*',
-//         methods: ['GET', 'POST']
-//     }
-// });
+const io = socketIo(server, {
+    cors: {
+        origin: '*',
+        methods: ['GET', 'POST']
+    }
+});
 
 const users = {};
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+});
 
 io.on('connection', (socket) => {
     console.log('A user connected');
