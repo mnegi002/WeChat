@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io('https://wechatsocketio.vercel.app');
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('msginp');
 const messageContainer = document.querySelector(".container");

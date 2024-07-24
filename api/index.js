@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        origin: '*',
+        origin: 'https://wechatsocketio.vercel.app',
         methods: ['GET', 'POST']
     }
 });
