@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/public/util/tabicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="icon" href="/util/tabicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index.css">
     <title>WeChat - Chatting Application</title>
-    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
-    <script defer src="/public/js/client.js"></script>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+    <script defer src="/js/client.js"></script>
 </head>
 <body>
     <nav class="logo">
-        <img src="/public/util/tabicon.png" alt="icon">
+        <img src="/util/tabicon.png" alt="icon">
         <h2>WeChat</h2>
     </nav>
     <div class="container">
@@ -19,11 +19,11 @@
     </div>
     <div class="send">
         <form action="#" id="send-container">
-            <input type="text" id="msginp">
-            <button type="submit" class="button"><img class="btn" src="/public/util/sendmsgbtn.png"></button>
+            <input type="text" id="msginp" required>
+            <button type="submit" class="button"><img class="btn" src="/util/sendmsgbtn.png" alt="Send"></button>
         </form>
     </div>
     <!-- Audio element for sound -->
-    <audio id="notification-sound" src="/public/util/sound.mp3" preload="auto"></audio>
+    <audio id="notification-sound" src="/util/sound.mp3" preload="auto"></audio>
 </body>
 </html>
